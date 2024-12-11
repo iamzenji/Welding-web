@@ -9,8 +9,10 @@
     "preview": "vite preview",
     "start": "serve -s dist -l $PORT"
   },
-  "devDependencies": {
-    "vite": "^6.0.1",
+  "dependencies": {
     "serve": "^14.0.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.1"
   }
 }
