@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welding Simulator App</title>
+  <link rel="icon" type="image/png" href="/assets/Weld%20logo-9j-GdU4F.png"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <style>
+    .hero {
+      background: url('/assets/Mainweld-CdCc0h9W.jpg') center center / cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Features Section */
+    .feature-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      margin-bottom: 20px;
+    }
+
+    /* Screenshots Section */
+    .screenshot-img {
+  width: 100%; 
+  height: 190px; 
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.screenshot-img:hover {
+  transform: scale(1.05); 
+}
+
+    /* Downloads Section */
+    .download-btn {
+      margin: 10px;
+    }
+
+    /* Game and Quiz Section */
+    .game-quiz-section {
+      padding: 60px 0;
+      background: url('your-game-quiz-bg.jpg') center center / cover no-repeat;
+      position: relative;
+      color: #fff;
+    }
+    .game-quiz-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    .game-quiz-content {
+      position: relative;
+      z-index: 1;
+    }
+    .game-quiz-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+
+    /* Responsive Adjustments */
+    @media (min-width: 768px) {
+      .game-quiz-img {
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+
+    /* Optional: Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/Weld%20logo-9j-GdU4F.png" alt="Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+        Welding Simulator
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#guide">Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#downloads">Downloads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#game-quiz">Simulation & Quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="display-4">Welcome to Welding Simulator App</h1>
+        <p class="lead">Enhance your welding skills with our comprehensive educational tools.</p>
+        <a href="#downloads" class="btn btn-primary btn-lg">Download Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Features</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-lightbulb feature-icon"></i>
+          <h4>Explore welding - practice & hands-on activities</h4>
+          <p>Jump into welding with fun lessons that focus on hands-on learning and practical skills!</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-tools feature-icon"></i>
+          <h4>Weld without equipment</h4>
+          <p>Start your journey with virtual 3D tools—no heavy gear needed!.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-globe feature-icon"></i>
+          <h4>Learn anytime, anywhere</h4>
+          <p>Practice welding skills from anywhere with our interactive platform!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section id="guide" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Welding Simulation Guide</h2>
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 1: Select Joint Type</h4>
+          <img src="/assets/Step1-C_7S5B8_.jpg" alt="Step 1: Select Joint Type" class="screenshot-img">
+          <p class="text-center">Choose the joint you want to weld.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 2: Set Loadout</h4>
+          <img src="/assets/Step22-BLVFBhyq.jpg" alt="Step 2: Set Loadout" class="screenshot-img">
+          <p class="text-center">Select the materials and tools you'll need for the welding task.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 3: Adjust Amperage</h4>
+          <img src="/assets/Step3-DFjby9MW.jpeg" alt="Step 3: Adjust Amperage" class="screenshot-img">
+          <p class="text-center">Set the amperage for your welding task according to the material and joint type.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 4: Check the Camera</h4>
+          <img src="/assets/Step4-C3Jfjb-2.jpeg" alt="Step 4: Check the Camera" class="screenshot-img">
+          <p class="text-center">Check the secondary view to help align the rod and plate.</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 5: Start Welding</h4>
+          <img src="/assets/Step5-C6iZCZGo.jpg" alt="Step 5: Start Welding" class="screenshot-img">
+          <p class="text-center">Stick the rod to the green guide on the plate.</p>
+        </div>
+        <!-- Step 6 -->
+        <div class="col-md-4">
+          <h4 class="text-center">Step 6: Finish the Weld</h4>
+          <img src="/assets/Step6-C31Fjl8t.jpg" alt="Step 6: Finish the Weld" class="screenshot-img">
+          <p class="text-center">Followed the green path and completed the weld within the time limit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads Section -->
+  <section id="downloads" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Downloads</h2>
+      <p>Get the Welding Simulator App for your device:</p>
+
+      <a href="Welding Simulator.apk" class="btn btn-outline-info download-btn">
+        <i class="bi bi-android"></i> Download for Android
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Game and Quiz Section -->
+  <section id="game-quiz" class="game-quiz-section">
+    <div class="container game-quiz-content">
+      <h2 class="text-center mb-5">Simulation & Quiz</h2>
+      
+      <!-- Welding Game -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+          <img src="/assets/Weldgames-DcBMcq5o.jpg" alt="Welding Game" class="game-quiz-img">
+        </div>
+        <div class="col-md-6">
+          <h3>Welding Simulator</h3>
+          <p>The 3D Dynamic Welding Simulator is an educational tool designed for Grade 10 TLE (Technology and Livelihood Education) welding students at Pampanga High School. It offers a safe, immersive training environment that simulates real-life welding scenarios. Students can practice various welding techniques in a controlled, virtual setting, improving their skills without the risks or costs associated with traditional methods. This simulator is tailored to enhance practical learning while tracking student progress through interactive modules and performance metrics.</p>
+        </div>
+      </div>
+      
+      <!-- Quiz -->
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+          <img src="/assets/Quiz-DypwlkJ2.jpg" alt="Welding Quiz" class="game-quiz-img">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h3>Quiz</h3>
+          <p>The quiz in the 3D Dynamic Welding Simulator allows students to test their knowledge of welding techniques and safety protocols. Upon completion, the quiz scores are automatically sent to the teacher's web-based account, where they can track and assess student performance in real time. This system enables efficient monitoring and helps teachers provide targeted feedback based on each student's progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Welding Simulator. All rights reserved.</p>
+      <!-- <div class="mt-2">
+       
+        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a> 
+       
+      </div> -->
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sources/js/main.js"></script>
+</body>
+</html>
